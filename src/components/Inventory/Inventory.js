@@ -1,5 +1,5 @@
 // import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import useSingleProduct from '../../Hooks/useSingleProduct';
 
@@ -14,7 +14,7 @@ const Inventory = () => {
 
     // console.log(productData);
 
-    const delivered = () => {
+    const delivered =useCallback( () => {
         fetch(`http://localhost:5000/decreasequantity/${_id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
@@ -23,12 +23,12 @@ const Inventory = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                // setProductData(data)
+
             })
 
-    };
+    });
 
-    const addUnits = (event) => {
+    const addUnits = useCallback((event) => {
         event.preventDefault()
         const unitNumber = JSON.parse(event.target.addInput.value);
         console.log(unitNumber);
@@ -42,7 +42,7 @@ const Inventory = () => {
             .then(data => {
                 console.log(data);
             })
-    }
+    });
 
     useEffect(() => {
         fetch(`http://localhost:5000/singleItem/${id}`, {
@@ -50,7 +50,11 @@ const Inventory = () => {
             .then(res => res.json())
             .then(data => setProductData(data))
 
-    }, [id, delivered])
+          
+
+          
+
+    }, [id, delivered, addUnits])
 
     return (
         <div className='container'>
@@ -87,3 +91,18 @@ const Inventory = () => {
 };
 
 export default Inventory;
+
+
+// function App() {
+//     const [count, setCount] = useState(0);
+  
+//     const logCount = () => {
+//       console.log(count);
+//     };
+  
+//     useEffect(() => {
+//       logCount();
+//     }, [logCount]);
+  
+//     return <div>{count}</div>;
+//   }

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import useAllProducts from '../../Hooks/useAllProducts';
 import TableRow from '../TableRow/TableRow';
 
 const ManageInventory = () => {
+
     const deleteItem = (id) => {
         fetch(`http://localhost:5000/deleteitem/${id}`, {
             method: 'DELETE'
@@ -18,13 +20,17 @@ const ManageInventory = () => {
         <div className='container'>
             <h2>Inventory: {allproducts.length}</h2>
 
+            <div className='d-flex justify-content-end my-3'>
+                <Link className='btn btn-light border border-1 rounded-1 py-0 px-4' to='/additems'> Add Item</Link>
+            </div>
+
             <table className="table">
                 <thead>
                     <tr>
                         <th scope="col">Image</th>
                         <th scope="col">Name</th>
                         <th scope="col">Quantity</th>
-                        {/* <th scope="col"></th> */}
+
                     </tr>
                 </thead>
                 <tbody>

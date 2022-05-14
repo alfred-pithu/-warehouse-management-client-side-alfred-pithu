@@ -4,7 +4,6 @@ const TableRow = ({ product, deleteItem }) => {
 
     const { _id, name, img, description, price, supplier, quantity } = product;
 
-    // deleteItem(_id);
 
     return (
 
