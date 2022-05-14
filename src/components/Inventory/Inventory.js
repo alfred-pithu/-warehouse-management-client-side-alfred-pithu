@@ -7,13 +7,7 @@ const Inventory = () => {
     const { id } = useParams();
     const [productData, setProductData] = useState({})
 
-    useEffect(() => {
-        fetch(`http://localhost:5000/singleItem/${id}`, {
-        })
-            .then(res => res.json())
-            .then(data => setProductData(data))
 
-    }, [id])
 
     const { _id, name, img, description, price, supplier, quantity, sold } = productData;
 
@@ -29,6 +23,7 @@ const Inventory = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                // setProductData(data)
             })
 
     };
@@ -48,6 +43,14 @@ const Inventory = () => {
                 console.log(data);
             })
     }
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/singleItem/${id}`, {
+        })
+            .then(res => res.json())
+            .then(data => setProductData(data))
+
+    }, [id, delivered])
 
     return (
         <div className='container'>
