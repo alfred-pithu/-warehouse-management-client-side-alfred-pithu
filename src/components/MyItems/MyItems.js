@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import ProductCard from '../ProductCard/ProductCard';
 
 const MyItems = () => {
     const [user, loading, error] = useAuthState(auth);
@@ -11,9 +12,15 @@ const MyItems = () => {
             .then(res => res.json())
             .then(data => setMyProducts(data))
     }, []);
+
     return (
-        <div>
+        <div className='container'>
             <h2>My Items: {myProducts.length}</h2>
+            <div className='row row-cols-1 row-cols-lg-3 g-5  '>
+                {
+                    myProducts.map(product => <ProductCard key={product._id} product={product}></ProductCard>)
+                }
+            </div>
         </div>
     );
 };

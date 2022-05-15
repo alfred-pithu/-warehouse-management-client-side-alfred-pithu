@@ -12,9 +12,12 @@ const AddItems = () => {
         const img = e.target.img.value;
         const description = e.target.description.value;
         const price = e.target.price.value;
-        const quantity = e.target.quantity.value;
-        const sold = e.target.sold.value;
+        const quantity = JSON.parse(e.target.quantity.value);
+        const sold = JSON.parse(e.target.sold.value);
         const supplier = e.target.supplier.value;
+
+        // console.log(quantity, typeof (quantity));
+        // console.log(sold, typeof (sold));
 
         const newItem = { email, name, img, description, price, quantity, sold, supplier };
         console.log(newItem);
