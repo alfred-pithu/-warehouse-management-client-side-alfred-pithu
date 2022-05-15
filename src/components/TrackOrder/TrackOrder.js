@@ -11,7 +11,7 @@ const TrackOrder = () => {
                 <div className='ms-5 '>
                     <h4>Track Your Sent Out <span className='text-danger'>Deliveries</span></h4>
                     <a className='bg-danger text-white px-5 py-1 border-0 rounded fs-5 btn mt-lg-3 mt-3' href='https://pathao.com/courier/'>Track
-                        <span className='ms-2 '><i class="fa fa-thin fa-truck"></i></span>
+                        <span className='ms-2 '><i className="fa fa-thin fa-truck"></i></span>
                     </a>
                 </div>
             </div>

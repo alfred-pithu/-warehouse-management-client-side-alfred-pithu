@@ -23,7 +23,7 @@ const AddItems = () => {
         const newItem = { email, name, img, description, price, quantity, sold, supplier };
         console.log(newItem);
 
-        fetch('http://localhost:5000/addnewitem', {
+        fetch('https://arcane-citadel-12309.herokuapp.com/addnewitem', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newItem)

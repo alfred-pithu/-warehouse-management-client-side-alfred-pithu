@@ -15,7 +15,7 @@ const Inventory = () => {
     // console.log(productData);
 
     const delivered =useCallback( () => {
-        fetch(`http://localhost:5000/decreasequantity/${_id}`, {
+        fetch(`https://arcane-citadel-12309.herokuapp.com/decreasequantity/${_id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify()
@@ -33,7 +33,7 @@ const Inventory = () => {
         const unitNumber = JSON.parse(event.target.addInput.value);
         console.log(unitNumber);
 
-        fetch(`http://localhost:5000/increasequantity/${_id}`, {
+        fetch(`https://arcane-citadel-12309.herokuapp.com/increasequantity/${_id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ unitNumber })
@@ -45,7 +45,7 @@ const Inventory = () => {
     });
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleItem/${id}`, {
+        fetch(`https://arcane-citadel-12309.herokuapp.com/singleItem/${id}`, {
         })
             .then(res => res.json())
             .then(data => setProductData(data))

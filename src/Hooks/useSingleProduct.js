@@ -5,7 +5,7 @@ const useSingleProduct = (id) => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleItem/${id}`, {
+        fetch(`https://arcane-citadel-12309.herokuapp.com/singleItem/${id}`, {
         })
             .then(res => res.json())
             .then(data => setProductData(data))

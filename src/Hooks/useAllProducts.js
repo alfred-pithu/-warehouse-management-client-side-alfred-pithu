@@ -4,7 +4,7 @@ function useAllProducts(dependency) {
     const [allproducts, setAllProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allproducts')
+        fetch('https://arcane-citadel-12309.herokuapp.com/allproducts')
             .then(res => res.json())
             .then(data => setAllProducts(data))
     }, [dependency])
