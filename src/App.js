@@ -13,11 +13,13 @@ import RequireAuth from './components/RequireAuth/RequireAuth';
 import MyItems from './components/MyItems/MyItems';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import Blog from './components/Blog/Blog';
+// import { Navbar } from 'react-bootstrap';
 
 function App() {
   return (
     <div >
       <Header></Header>
+      {/* <Navbar></Navbar> */}
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>

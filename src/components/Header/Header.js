@@ -14,20 +14,22 @@ const Header = () => {
     }
 
     if (user) {
-        console.log(user);
+        // console.log(user);
     }
     return (
         <div>
-            <Navbar bg="light" variant="light">
-                <Container>
-                    {/* <Navbar.Brand href="#home">Navbar</Navbar.Brand> */}
-                    <Nav className="me-auto">
-                        <Nav.Link className='fw-bold' as={Link} to="/home">Home</Nav.Link>
+            <Navbar style={{ backgroundColor: 'white' }} className='container-fluid px-0 shadow fixed-top '>
+                {/* bg="light" variant="light" */}
 
+                <Container className=' d-lg-flex flex-lg-row d-flex flex-column align-items-center justify-content-lg-between justify-content-center'>
+
+                    <Nav className=" mb-lg-0 mb-3 ">
+                        <Navbar.Brand as={Link} to="/">ISHOP INC</Navbar.Brand>
+                        <Nav.Link className='fw-bold' as={Link} to="/home">Home</Nav.Link>
                         <Nav.Link className='fw-bold' as={Link} to="/blogs">Blogs</Nav.Link>
                     </Nav>
-                    <Nav className='ms-auto'>
 
+                    <Nav className=' '>
                         {
                             user ? <><Nav.Link className='fw-bold' as={Link} to="/manageinventory">Manage Inventory</Nav.Link>
                                 <Nav.Link className='fw-bold' as={Link} to="/additems">Add Items</Nav.Link>
@@ -43,9 +45,11 @@ const Header = () => {
                         </button></Nav.Link>
 
                     </Nav>
+
                 </Container>
             </Navbar>
         </div>
+
     );
 };
 
