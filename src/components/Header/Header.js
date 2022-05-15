@@ -27,9 +27,12 @@ const Header = () => {
                         <Nav.Link className='fw-bold' as={Link} to="/blogs">Blogs</Nav.Link>
                     </Nav>
                     <Nav className='ms-auto'>
-                        <Nav.Link className='fw-bold' as={Link} to="/manageinventory">Manage Inventory</Nav.Link>
-                        <Nav.Link className='fw-bold' as={Link} to="/additems">Add Items</Nav.Link>
-                        <Nav.Link className='fw-bold' as={Link} to="/myitems">My Items</Nav.Link>
+
+                        {
+                            user ? <><Nav.Link className='fw-bold' as={Link} to="/manageinventory">Manage Inventory</Nav.Link>
+                                <Nav.Link className='fw-bold' as={Link} to="/additems">Add Items</Nav.Link>
+                                <Nav.Link className='fw-bold' as={Link} to="/myitems">My Items</Nav.Link></> : ''
+                        }
 
                         <Nav.Link className='fw-bold' as={Link} to="/login"><button onClick={logOut} className='border border-2 rounded-1' >
                             {
@@ -47,3 +50,4 @@ const Header = () => {
 };
 
 export default Header;
+

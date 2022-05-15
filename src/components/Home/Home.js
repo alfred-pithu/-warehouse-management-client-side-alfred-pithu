@@ -7,7 +7,7 @@ const Home = () => {
 
             {/* Banner */}
             <div className='mt-5 border border-1'>
-                <img className=' d-block mx-auto' src="https://i.ibb.co/tB9Lr54/resized-banner.png" alt="" />
+                <img className=' d-block mx-auto img-fluid' src="https://i.ibb.co/tB9Lr54/resized-banner.png" alt="" />
             </div>
 
             {/* // Items */}
