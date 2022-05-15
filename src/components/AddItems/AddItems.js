@@ -1,6 +1,7 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
 
 const AddItems = () => {
     const [user, loading, error] = useAuthState(auth);
@@ -37,6 +38,7 @@ const AddItems = () => {
     return (
         <div className='container'>
             <h3>Add Items here</h3>
+
 
             <form onSubmit={addClicked} className='w-50 mx-auto'>
                 <div className="mb-3">
