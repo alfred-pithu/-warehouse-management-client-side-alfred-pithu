@@ -1,9 +1,13 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const AddItems = () => {
+    const [user, loading, error] = useAuthState(auth);
+
     const addClicked = (e) => {
         e.preventDefault()
-        const email = e.target.email.value;
+        const email = user.email;
         const name = e.target.name.value;
         const img = e.target.img.value;
         const description = e.target.description.value;
@@ -25,6 +29,7 @@ const AddItems = () => {
                 console.log(data);
 
             })
+        e.target.reset();
     }
     return (
         <div className='container'>
@@ -33,7 +38,7 @@ const AddItems = () => {
             <form onSubmit={addClicked} className='w-50 mx-auto'>
                 <div className="mb-3">
                     <label className="form-label">Your Email</label>
-                    <input type="email" name='email' className="form-control" />
+                    <input type="email" name='email' value={user?.email} className="form-control" readOnly />
                 </div>
                 <div className="mb-3">
                     <label className="form-label">Product Name</label>

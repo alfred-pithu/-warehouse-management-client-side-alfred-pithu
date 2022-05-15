@@ -18,7 +18,7 @@ const HomeItemSection = () => {
                 }
             </div>
             <div className=' d-flex justify-content-end my-4'>
-                <Link className='btn btn-dark  ms-auto border' to='/manageinventory'> Manage Inventory</Link>
+                <Link className='btn btn-dark  ms-auto border' to='/manageinventory'> Manage Inventories</Link>
 
             </div>
         </div>

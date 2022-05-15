@@ -78,8 +78,8 @@ const Inventory = () => {
                             <button onClick={delivered} className='btn btn-primary'>Delivered</button>
 
                             <form onSubmit={addUnits} className="input-group mb-3 mt-3 w-25">
-                                <input type="number" className="form-control" name='addInput' placeholder='Add Units' />
-                                <input className="btn btn-outline-secondary" type="submit" value='Add' id="button-addon2"></input>
+                                <input type="number" className="form-control " name='addInput' placeholder='' />
+                                <input className="btn btn-outline-secondary" type="submit" value='Restock' id="button-addon2"></input>
                             </form>
                         </div>
                     </div>

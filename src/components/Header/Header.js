@@ -1,26 +1,44 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import { signOut } from 'firebase/auth'
+import auth from '../../firebase.init';
 import './Header.css'
 
 const Header = () => {
+    const [user, loading, error] = useAuthState(auth);
+
+    const logOut = () => {
+        signOut(auth)
+    }
+
+    if (user) {
+        console.log(user);
+    }
     return (
         <div>
             <Navbar bg="light" variant="light">
                 <Container>
                     {/* <Navbar.Brand href="#home">Navbar</Navbar.Brand> */}
                     <Nav className="me-auto">
-                        <Nav.Link as={Link} to="/home">Home</Nav.Link>
+                        <Nav.Link className='fw-bold' as={Link} to="/home">Home</Nav.Link>
 
-                        <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
+                        <Nav.Link className='fw-bold' as={Link} to="/blogs">Blogs</Nav.Link>
                     </Nav>
                     <Nav className='ms-auto'>
-                        <Nav.Link as={Link} to="/manageinventory">Manage Inventory</Nav.Link>
-                        <Nav.Link as={Link} to="/additems">Add Items</Nav.Link>
-                        <Nav.Link as={Link} to="/myitems">My Items</Nav.Link>
-                        {/* <button className='border border-0'>
-                            <Nav.Link as={Link} to="/login">Login</Nav.Link>
-                        </button> */}
+                        <Nav.Link className='fw-bold' as={Link} to="/manageinventory">Manage Inventory</Nav.Link>
+                        <Nav.Link className='fw-bold' as={Link} to="/additems">Add Items</Nav.Link>
+                        <Nav.Link className='fw-bold' as={Link} to="/myitems">My Items</Nav.Link>
+
+                        <Nav.Link className='fw-bold' as={Link} to="/login"><button onClick={logOut} className='border border-2 rounded-1' >
+                            {
+                                user ? 'Logout' : 'Login'
+                            }
+
+
+                        </button></Nav.Link>
+
                     </Nav>
                 </Container>
             </Navbar>

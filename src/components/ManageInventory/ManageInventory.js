@@ -21,7 +21,7 @@ const ManageInventory = () => {
             <h2>Inventory: {allproducts.length}</h2>
 
             <div className='d-flex justify-content-end my-3'>
-                <Link className='btn btn-light border border-1 rounded-1 py-0 px-4' to='/additems'> Add Item</Link>
+                <Link className='btn btn-light border border-1 rounded-1 py-0 px-4' to='/additems'> Add New Item</Link>
             </div>
 
             <table className="table">
