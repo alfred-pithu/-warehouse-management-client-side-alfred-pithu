@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div className='container py-5'>
+        <div className='container py-2'>
             <div className='shadow p-3'>
                 <p>1- When should you use nodejs and when should you use MongoDB ? <br /> <br />
 

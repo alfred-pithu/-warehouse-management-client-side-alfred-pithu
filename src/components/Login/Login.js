@@ -23,14 +23,13 @@ const Login = () => {
         const password = e.target.password.value;
         signInWithEmailAndPassword(email, password)
 
-        // console.log(email, password);
     }
     if (userHook) {
         navigate(from, { replace: true });
 
     }
     return (
-        <div className='container py-5'>
+        <div className='container '>
 
             <form onSubmit={loginStart} className='w-50 mx-auto my-5'>
                 <div className="mb-3">

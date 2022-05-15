@@ -13,13 +13,9 @@ const Header = () => {
         signOut(auth)
     }
 
-    if (user) {
-        // console.log(user);
-    }
     return (
         <div className='mb-5 '>
-            <Navbar style={{ backgroundColor: 'white' }} className='container-fluid px-0 shadow  fixed-top '>
-                {/* bg="light" variant="light" */}
+            <Navbar style={{ backgroundColor: 'white' }} className='container-fluid px-0 shadow   '>
 
                 <Container className=' d-lg-flex flex-lg-row d-flex flex-column align-items-center justify-content-lg-between justify-content-center'>
 
@@ -43,11 +39,8 @@ const Header = () => {
                                 user ? 'Logout' : 'Login'
                             }
 
-
                         </button></Nav.Link>
-
                     </Nav>
-
                 </Container>
             </Navbar>
         </div>

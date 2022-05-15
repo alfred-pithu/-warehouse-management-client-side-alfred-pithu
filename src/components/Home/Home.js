@@ -12,7 +12,7 @@ const Home = () => {
                 <img className=' d-block mx-auto img-fluid' src="https://i.ibb.co/tB9Lr54/resized-banner.png" alt="" />
             </div>
 
-            {/* // Items */}
+
             <HomeItemSection></HomeItemSection>
 
             <TrackOrder></TrackOrder>

@@ -6,15 +6,9 @@ import useSingleProduct from '../../Hooks/useSingleProduct';
 const Inventory = () => {
     const { id } = useParams();
     const [productData, setProductData] = useState({})
-
-
-
     const { _id, name, img, description, price, supplier, quantity, sold } = productData;
 
-
-    // console.log(productData);
-
-    const delivered =useCallback( () => {
+    const delivered = useCallback(() => {
         fetch(`https://arcane-citadel-12309.herokuapp.com/decreasequantity/${_id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
@@ -25,7 +19,6 @@ const Inventory = () => {
                 console.log(data);
 
             })
-
     });
 
     const addUnits = useCallback((event) => {
@@ -49,11 +42,6 @@ const Inventory = () => {
         })
             .then(res => res.json())
             .then(data => setProductData(data))
-
-          
-
-          
-
     }, [id, delivered, addUnits])
 
     return (
@@ -91,17 +79,3 @@ const Inventory = () => {
 
 export default Inventory;
 
-
-// function App() {
-//     const [count, setCount] = useState(0);
-  
-//     const logCount = () => {
-//       console.log(count);
-//     };
-  
-//     useEffect(() => {
-//       logCount();
-//     }, [logCount]);
-  
-//     return <div>{count}</div>;
-//   }

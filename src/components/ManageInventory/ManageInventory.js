@@ -4,7 +4,6 @@ import useAllProducts from '../../Hooks/useAllProducts';
 import TableRow from '../TableRow/TableRow';
 
 const ManageInventory = () => {
-
     const deleteItem = (id) => {
         fetch(`https://arcane-citadel-12309.herokuapp.com/deleteitem/${id}`, {
             method: 'DELETE'
@@ -15,9 +14,8 @@ const ManageInventory = () => {
 
     const [allproducts] = useAllProducts(deleteItem);
 
-
     return (
-        <div className='container pt-5'>
+        <div className='container'>
 
             <div className='d-flex justify-content-end my-3'>
                 <Link className='btn btn-light border border-1 rounded-1 py-0 px-4' to='/additems'> Add New Item</Link>

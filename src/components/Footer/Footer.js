@@ -9,7 +9,7 @@ const Footer = () => {
                 >
 
                     <div className='mx-auto'>
-                        <a href="" className="me-4 text-reset">
+                        <a href="" className="me-4 text-reset ">
                             <i className="fab fa-facebook-f"></i>
                         </a>
                         <a href="" className="me-4 text-reset">
@@ -39,8 +39,6 @@ const Footer = () => {
 
                             </div>
 
-
-
                             <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                                 <h6 className="text-uppercase fw-bold mb-4">
                                     Products
@@ -58,7 +56,6 @@ const Footer = () => {
                                     <a href="" className="text-reset">Ipod</a>
                                 </p>
                             </div>
-
 
                             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                                 <h6 className="text-uppercase fw-bold mb-4">

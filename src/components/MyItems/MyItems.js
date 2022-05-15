@@ -27,7 +27,7 @@ const MyItems = () => {
     }, [deleteItem]);
 
     return (
-        <div className='container pt-5'>
+        <div className='container '>
 
             <div className='row row-cols-1 row-cols-lg-3 g-5  '>
                 {

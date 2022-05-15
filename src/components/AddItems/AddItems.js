@@ -17,9 +17,6 @@ const AddItems = () => {
         const sold = JSON.parse(e.target.sold.value);
         const supplier = e.target.supplier.value;
 
-        // console.log(quantity, typeof (quantity));
-        // console.log(sold, typeof (sold));
-
         const newItem = { email, name, img, description, price, quantity, sold, supplier };
         console.log(newItem);
 
@@ -36,7 +33,7 @@ const AddItems = () => {
         e.target.reset();
     }
     return (
-        <div className='container pt-5'>
+        <div className='container'>
             <h3 className='text-center my-2'>Add Items here</h3>
 
 
