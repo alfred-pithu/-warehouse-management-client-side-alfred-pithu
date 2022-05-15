@@ -11,6 +11,7 @@ import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import MyItems from './components/MyItems/MyItems';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         }></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
+        <Route path='*' element={<ErrorPage></ErrorPage>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
