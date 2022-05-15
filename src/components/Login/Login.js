@@ -30,8 +30,7 @@ const Login = () => {
 
     }
     return (
-        <div className='container'>
-            <h2>Login</h2>
+        <div className='container py-5'>
 
             <form onSubmit={loginStart} className='w-50 mx-auto my-5'>
                 <div className="mb-3">

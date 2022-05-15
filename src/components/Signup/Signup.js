@@ -32,8 +32,7 @@ const Signup = () => {
 
 
     return (
-        <div className='container'>
-            <h2>Signup</h2>
+        <div className='container pt-5'>
 
             <form onSubmit={signUpStart} className='w-50 mx-auto my-5'>
                 <div className="mb-3">

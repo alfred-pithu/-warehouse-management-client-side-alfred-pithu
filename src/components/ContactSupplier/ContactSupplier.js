@@ -3,7 +3,7 @@ import React from 'react';
 const ContactSupplier = () => {
     return (
 
-        <div className=' my-5 row  mx-auto gy-3'>
+        <div className=' my-5 row  mx-auto gy-3' id='supplier'>
 
 
             <div className=' col-12 col-lg-5 d-flex  align-items-center '>

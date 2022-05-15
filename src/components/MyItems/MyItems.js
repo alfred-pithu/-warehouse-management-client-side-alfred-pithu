@@ -14,8 +14,8 @@ const MyItems = () => {
     }, []);
 
     return (
-        <div className='container'>
-            <h2>My Items: {myProducts.length}</h2>
+        <div className='container pt-5'>
+
             <div className='row row-cols-1 row-cols-lg-3 g-5  '>
                 {
                     myProducts.map(product => <ProductCard key={product._id} product={product}></ProductCard>)

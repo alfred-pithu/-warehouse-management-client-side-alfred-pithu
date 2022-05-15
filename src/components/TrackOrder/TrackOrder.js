@@ -2,7 +2,7 @@ import React from 'react';
 
 const TrackOrder = () => {
     return (
-        <div className=' my-3 row  mx-auto gy-3'>
+        <div className=' my-3 row  mx-auto gy-3' id='track'>
             <div className=' col-12 col-lg-7 '>
                 <img className='img-fluid w-75  mx-auto d-block' src='https://i.ibb.co/Y0PQDg2/Hnet-com-image-2.jpg' alt="" />
             </div>

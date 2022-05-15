@@ -17,8 +17,8 @@ const Header = () => {
         // console.log(user);
     }
     return (
-        <div>
-            <Navbar style={{ backgroundColor: 'white' }} className='container-fluid px-0 shadow fixed-top '>
+        <div className='mb-5 '>
+            <Navbar style={{ backgroundColor: 'white' }} className='container-fluid px-0 shadow  fixed-top '>
                 {/* bg="light" variant="light" */}
 
                 <Container className=' d-lg-flex flex-lg-row d-flex flex-column align-items-center justify-content-lg-between justify-content-center'>
@@ -27,6 +27,8 @@ const Header = () => {
                         <Navbar.Brand as={Link} to="/">ISHOP INC</Navbar.Brand>
                         <Nav.Link className='fw-bold' as={Link} to="/home">Home</Nav.Link>
                         <Nav.Link className='fw-bold' as={Link} to="/blogs">Blogs</Nav.Link>
+                        <Nav.Link className='fw-bold text-muted' href='/home#track'>Track</Nav.Link>
+                        <Nav.Link className='fw-bold text-muted' href='/home#supplier'>Supplier</Nav.Link>
                     </Nav>
 
                     <Nav className=' '>

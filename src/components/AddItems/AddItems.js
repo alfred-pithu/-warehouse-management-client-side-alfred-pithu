@@ -36,8 +36,8 @@ const AddItems = () => {
         e.target.reset();
     }
     return (
-        <div className='container'>
-            <h3>Add Items here</h3>
+        <div className='container pt-5'>
+            <h3 className='text-center my-2'>Add Items here</h3>
 
 
             <form onSubmit={addClicked} className='w-50 mx-auto'>
