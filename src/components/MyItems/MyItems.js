@@ -13,7 +13,7 @@ const MyItems = () => {
 
 
     const deleteItem = (id) => {
-        fetch(`https://arcane-citadel-12309.herokuapp.com/deleteitem/${id}`, {
+        fetch(`https://ishop-bocf.onrender.com/deleteitem/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -21,7 +21,7 @@ const MyItems = () => {
     }
 
     useEffect(() => {
-        fetch(`https://arcane-citadel-12309.herokuapp.com/myitems?email=${user.email}`)
+        fetch(`https://ishop-bocf.onrender.com/myitems?email=${user.email}`)
             .then(res => res.json())
             .then(data => setMyProducts(data))
     }, [deleteItem]);

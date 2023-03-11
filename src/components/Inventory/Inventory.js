@@ -9,7 +9,7 @@ const Inventory = () => {
     const { _id, name, img, description, price, supplier, quantity, sold } = productData;
 
     const delivered = useCallback(() => {
-        fetch(`https://arcane-citadel-12309.herokuapp.com/decreasequantity/${_id}`, {
+        fetch(`https://ishop-bocf.onrender.com/decreasequantity/${_id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify()
@@ -26,7 +26,7 @@ const Inventory = () => {
         const unitNumber = JSON.parse(event.target.addInput.value);
         console.log(unitNumber);
 
-        fetch(`https://arcane-citadel-12309.herokuapp.com/increasequantity/${_id}`, {
+        fetch(`https://ishop-bocf.onrender.com/increasequantity/${_id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ unitNumber })
@@ -38,7 +38,7 @@ const Inventory = () => {
     });
 
     useEffect(() => {
-        fetch(`https://arcane-citadel-12309.herokuapp.com/singleItem/${id}`, {
+        fetch(`https://ishop-bocf.onrender.com/singleItem/${id}`, {
         })
             .then(res => res.json())
             .then(data => setProductData(data))

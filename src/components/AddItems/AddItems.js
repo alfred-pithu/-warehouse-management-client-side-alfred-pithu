@@ -20,7 +20,7 @@ const AddItems = () => {
         const newItem = { email, name, img, description, price, quantity, sold, supplier };
         console.log(newItem);
 
-        fetch('https://arcane-citadel-12309.herokuapp.com/addnewitem', {
+        fetch('https://ishop-bocf.onrender.com/addnewitem', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newItem)

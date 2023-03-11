@@ -5,7 +5,7 @@ import TableRow from '../TableRow/TableRow';
 
 const ManageInventory = () => {
     const deleteItem = (id) => {
-        fetch(`https://arcane-citadel-12309.herokuapp.com/deleteitem/${id}`, {
+        fetch(`https://ishop-bocf.onrender.com/deleteitem/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

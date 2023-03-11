@@ -5,7 +5,7 @@ const useSingleProduct = (id) => {
 
 
     useEffect(() => {
-        fetch(`https://arcane-citadel-12309.herokuapp.com/singleItem/${id}`, {
+        fetch(`https://ishop-bocf.onrender.com/singleItem/${id}`, {
         })
             .then(res => res.json())
             .then(data => setProductData(data))
